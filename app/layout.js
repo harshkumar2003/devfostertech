@@ -42,7 +42,7 @@ export const metadata = {
     siteName: "Dev Foster Tech",
     images: [
       {
-        url: "https://devfoster.tech/og-image.png",
+        url: "https://devfostertech.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Dev Foster Tech Banner",
@@ -57,7 +57,7 @@ export const metadata = {
     description:
       "Crafting digital excellence — from sleek websites to smart branding and SEO.",
     // creator: "@your_twitter_handle",
-    images: ["https://devfoster.tech/og-image.png"],
+    images: ["https://devfostertech.com/og-image.png"],
   },
   metadataBase: new URL("https://devfoster.tech"),
   alternates: {
