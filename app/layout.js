@@ -71,7 +71,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -80,11 +79,11 @@ export default function RootLayout({ children }) {
               "@type": "Organization",
               name: "Dev Foster Tech",
               url: "https://devfostertech.com",
-              logo: "https://devfostertech.com/logo.png",
-              sameAs: [
-                // "https://linkedin.com/company/devfoster",
-                "https://www.instagram.com/devfostertech",
-              ],
+              logo: {
+                "@type": "ImageObject",
+                url: "https://devfostertech.com/logo.svg",
+              },
+              sameAs: ["https://www.instagram.com/devfostertech"],
             }),
           }}
         />
