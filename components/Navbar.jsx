@@ -47,9 +47,9 @@ const Navbar = () => {
     //   </div>
     // </div>
     <nav className={`w-full px-7 pt-4 pb-1 md:px-5  flex justify-between items-center fixed z-50 ${isScroll ? "bg-black    shadow-sm " : ""}`}>
-        <a href='#top'>
+        <Link href='/'>
             <Image src={logo} width={100}  alt='Logo' className='w-[130px] md:w-[100px] sm:w-[120px] cursor-pointer'/>
-        </a>
+        </Link>
         <ul className={`flex space-x-16 md:space-x-12 bg-[#6CDDC2] rounded-full w-[600px] md:w-[500px] h-[50px] items-center p-7 md:p-3 font-medium sm:hidden ${isScroll ? '' : ""}`}>
           <li><Link href='/'>Home</Link></li>
           <li><Link href="/#services">Services</Link></li>
