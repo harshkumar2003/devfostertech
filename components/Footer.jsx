@@ -1,15 +1,18 @@
-import React from 'react'
+// import React from 'react'
 import insta from '../Assets/Instagram.svg'
 import linke from '../Assets/Linkedin.svg'
 import x from '../Assets/x.svg'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
     <div id='footer' className=' border-t-[1px] pt-10'>
         <div className=''>
             <ul className='flex justify-center text-white gap-4 text-[20px]'>
-                <li><a href="#blog">Blog</a></li>
+                {/* <li><a href="blog">Blog</a></li> */}
+                {/* <Link href={`/blog/${post.id}`}> */}
+                <li><Link href='blog'>Blog</Link></li>
                 <li><a href="#blog">Support</a></li>
                 <li><a href="#blog">Terms</a></li>
             </ul>
