@@ -32,7 +32,7 @@ export default async function Blog() {
 
         <h1 className="text-[#6CDDC2] font-bold text-xl pt-10">Featured Article</h1>
         
-        <div className="mt-8 grid grid-cols-3 gap-5 justify-center items-center justify-items-center">
+        <div className="mt-8 grid grid-cols-3 gap-5 justify-center items-center justify-items-center sm:grid sm:grid-cols-1 sm:justify-center">
           {posts?.map((post)=>(
             <Link href={`/blog/${post.id}`}><Card key={post.id} title={post.title} description={post.content.slice(0,100)} image={post.image_url} tags={post.tags} date={post.created_at}/></Link>
           ))}

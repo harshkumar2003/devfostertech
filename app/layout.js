@@ -65,37 +65,36 @@ export const metadata = {
   alternates: {
     canonical: "https://devfostertech.com",
   },
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#000000",
+  // viewport: "width=device-width, initial-scale=1",
+  // themeColor: "#000000",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Dev Foster Tech",
-              url: "https://devfostertech.com",
-              logo: {
-                "@type": "ImageObject",
-                url: "https://devfostertech.com/logo.svg",
-              },
-              sameAs: ["https://www.instagram.com/devfostertech"],
-            }),
-          }}
-        />
-      </head>
+      {/* The JSON-LD script is now a direct child of <html> */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Dev Foster Tech",
+            url: "https://devfostertech.com",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://devfostertech.com/logo.svg",
+            },
+            sameAs: ["https://www.instagram.com/devfostertech"],
+          }),
+        }}
+      />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black scroll-smooth`}
       >
-        <Navbar/>
+        <Navbar />
         <main>{children}</main>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
