@@ -96,6 +96,9 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
       </body>
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8923506649802677"
+     crossorigin="anonymous"></script>
     </html>
   );
 }
