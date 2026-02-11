@@ -28,7 +28,7 @@ export const metadata = {
     "tech company",
     "web agency",
   ],
-  authors: [{ name: "Harsh Kumar", url: "https://devfostertech.com" }],
+  authors: [{ name: "Harsh Kumar", url: "https://www.devfostertech.com" }],
   creator: "Harsh Kumar",
   publisher: "Dev Foster Tech",
   applicationName: "Dev Foster Tech",
@@ -40,11 +40,11 @@ export const metadata = {
     title: "Dev Foster Tech",
     description:
       "Crafting digital excellence — from sleek websites to smart branding and SEO.",
-    url: "https://devfostertech.com",
+    url: "https://www.devfostertech.com",
     siteName: "Dev Foster Tech",
     images: [
       {
-        url: "https://devfostertech.com/og-image.png",
+        url: "https://www.devfostertech.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Dev Foster Tech Banner",
@@ -59,11 +59,11 @@ export const metadata = {
     description:
       "Crafting digital excellence — from sleek websites to smart branding and SEO.",
     // creator: "@your_twitter_handle",
-    images: ["https://devfostertech.com/og-image.png"],
+    images: ["https://www.devfostertech.com/og-image.png"],
   },
-  metadataBase: new URL("https://devfostertech.com"),
+  metadataBase: new URL("https://www.devfostertech.com"),
   alternates: {
-    canonical: "https://devfostertech.com",
+    canonical: "https://www.devfostertech.com",
   },
   // viewport: "width=device-width, initial-scale=1",
   // themeColor: "#000000",
@@ -80,10 +80,10 @@ export default function RootLayout({ children }) {
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "Dev Foster Tech",
-            url: "https://devfostertech.com",
+            url: "https://www.devfostertech.com",
             logo: {
               "@type": "ImageObject",
-              url: "https://devfostertech.com/logo.svg",
+              url: "https://www.devfostertech.com/logo.svg",
             },
             sameAs: ["https://www.instagram.com/devfostertech"],
           }),
@@ -102,3 +102,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
