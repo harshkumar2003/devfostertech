@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import React, { useState } from "react";
 import cont from "../Assets/cont.svg";
@@ -42,7 +43,7 @@ const Contact = () => {
   return (
     <div id="contact" className="py-10 scroll-mt-20">
       <h1 className="text-center text-[#6cddc2] pb-4">
-        Connect With Dev Foster Tech
+        Let’s Build Your Next Growth Project
       </h1>
       <div className="bg-[#6CDDC2] rounded-2xl p-4 sm:flex sm:flex-col flex justify-between w-[80%] mx-auto">
         <div className="pt-8">

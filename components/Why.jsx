@@ -10,19 +10,19 @@ function Why() {
 
         <div className='sm:flex sm:flex-col sm:justify-center gap-8 items-center mt-8 grid grid-cols-3 justify-items-center'>
             <div className='border-2 border-white rounded-2xl w-[210px]  '>
-                <p className='text-[#6CDDC2] text-center p-2'>Our team combines extensive knowledge and hands-on experience to address IT challenges strategically and deliver effective solutions.</p>
+                <p className='text-[#6CDDC2] text-center p-2'>Execution-first team with practical experience in website delivery, SEO implementation, and growth systems.</p>
             </div>
 
             <div className='border-2 border-white rounded-2xl w-[210px]  '>
-                <p className='text-[#6CDDC2] text-center p-2'>We understand that each business is unique, which is why we create personalized IT strategies tailored to your specific objectives.</p>
+                <p className='text-[#6CDDC2] text-center p-2'>Custom strategy for each business model, audience type, and market stage.</p>
             </div>
 
             <div className='border-2 border-white rounded-2xl w-[210px]  '>
-                <p className='text-[#6CDDC2] text-center p-2'>Our primary focus is on delivering solutions that yield tangible benefits for our clients, aiming for measurable improvements.</p>
+                <p className='text-[#6CDDC2] text-center p-2'>Transparent process, measurable outcomes, and clear communication at every step.</p>
             </div>
 
             <div className='border-2 border-white rounded-2xl w-[210px]  '>
-                <p className='text-[#6CDDC2] text-center p-2'>We prioritize understanding your business requirements and offering timely, supportive assistance to ensure a productive and positive collaboration.</p>
+                <p className='text-[#6CDDC2] text-center p-2'>Long-term support mindset, not one-time project delivery.</p>
             </div>
         </div>
       

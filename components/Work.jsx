@@ -12,11 +12,8 @@ const Work = () => {
         <h1 className="text-[#6CDDC2] text-[25px] text-center">Our Work</h1>
         <div className="flex justify-center items-center">
           <p className="text-white px-20 sm:px-10 mt-2 text-center">
-            At Dev Foster Tech, we pride ourselves on delivering exceptional IT
-            solutions that drive business success. Explore our portfolio to see
-            how we've helped clients achieve their digital goals through
-            innovative website design, effective SEO strategies, and impactful
-            social media branding.
+            Explore real delivery outcomes from client projects across website
+            development, digital positioning, and growth-focused execution.
           </p>
         </div>
       </div>
@@ -25,12 +22,14 @@ const Work = () => {
         <div className="flex flex-col justify-center">
             <Image src={nifse} alt="nifse" className="sm:w-auto w-[500px]"/>
             <h1 className="text-white text-center pt-4 text-[25px]">NIFSE Gorakhpur</h1>
+            <p className="text-center text-[#9fb0be] pt-2">Website design and structured digital presence setup.</p>
         </div>
 
         {/* heera health */}
         <div className="">
             <Image src={heera} alt="heera health care" className="sm:w-auto w-[500px]" />
             <h1 className="text-white text-center pt-4 text-[25px]">Heera Health care</h1>
+            <p className="text-center text-[#9fb0be] pt-2">Brand-first healthcare web experience with conversion clarity.</p>
         </div>
 
       </div>
