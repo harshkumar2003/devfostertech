@@ -1,22 +1,22 @@
 function Card({ title, description, image, tags = [], date }) {
+  const imageSource = image || "/og-image.png";
+
   return (
-    <div className="bg-gray-900 border border-[#6CDDC2] rounded-2xl overflow-hidden shadow-md w-80 flex flex-col">
+    <article className="group h-full overflow-hidden rounded-2xl border border-[#6CDDC2]/35 bg-gradient-to-b from-[#0e141b] to-[#0a1016] shadow-md transition hover:-translate-y-1 hover:border-[#6CDDC2]/70 hover:shadow-[0_16px_40px_rgba(108,221,194,0.12)]">
       
       {/* Image Section */}
-      {image && (
-        <div className="relative w-full h-48">
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover object-center"
-          />
-          {/* Gradient overlay for readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
-        </div>
-      )}
+      <div className="relative h-52 w-full">
+        <img
+          src={imageSource}
+          alt={title}
+          className="h-full w-full object-cover object-center transition duration-300 group-hover:scale-[1.03]"
+        />
+        {/* Gradient overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#070b10] via-transparent to-transparent"></div>
+      </div>
 
       {/* Content Section */}
-      <div className="p-5 flex flex-col flex-grow">
+      <div className="flex h-full flex-col p-5">
 
     {/* Tags */}
         {tags.length > 0 && (
@@ -24,7 +24,7 @@ function Card({ title, description, image, tags = [], date }) {
             {tags.map((tag, index) => (
               <span
                 key={index}
-                className="bg-[#6CDDC2]/30 text-[#6CDDC2] text-xs font-medium px-3 py-1 rounded-full backdrop-blur-sm"
+                className="rounded-full border border-[#6CDDC2]/35 bg-[#6CDDC2]/12 px-2.5 py-1 text-[11px] font-medium text-[#6CDDC2]"
               >
                 {tag}
               </span>
@@ -35,11 +35,11 @@ function Card({ title, description, image, tags = [], date }) {
 
 
         {/* Title */}
-        {title && <h2 className="text-xl font-bold text-white mb-2">{title}</h2>}
+        {title && <h2 className="mb-2 line-clamp-2 text-lg font-bold text-white">{title}</h2>}
 
         {/* Description */}
         {description && (
-          <p className="text-gray-300 text-sm mb-4 line-clamp-3">
+          <p className="mb-4 line-clamp-3 text-sm leading-6 text-gray-300">
             {description}
           </p>
         )}
@@ -48,7 +48,7 @@ function Card({ title, description, image, tags = [], date }) {
 
         {/* Date */}
         {date && (
-          <p className="text-gray-400 text-xs mt-auto">
+          <p className="mt-auto border-t border-white/10 pt-3 text-xs text-gray-400">
             {new Date(date).toLocaleDateString(undefined, {
               day: "numeric",
               month: "short",
@@ -57,7 +57,7 @@ function Card({ title, description, image, tags = [], date }) {
           </p>
         )}
       </div>
-    </div>
+    </article>
   );
 }
 
