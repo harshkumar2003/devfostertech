@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -70,6 +71,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const adClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "ca-pub-2122287912428769";
+
   return (
     <html lang="en">
       {/* The JSON-LD script is now a direct child of <html> */}
@@ -92,13 +95,17 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black scroll-smooth`}
       >
+        <Script
+          id="adsense-script"
+          async
+          strategy="afterInteractive"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adClient}`}
+          crossOrigin="anonymous"
+        />
         <Navbar />
         <main>{children}</main>
         <Footer />
       </body>
-
-       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2122287912428769"
-     crossorigin="anonymous"></script>
     </html>
   );
 }

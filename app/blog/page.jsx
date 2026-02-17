@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Search, Sparkles, TrendingUp } from "lucide-react";
 import Card from "@/components/Card";
 import { supabase } from "@/lib/supabaseClient";
+import AdSenseSlot from "@/components/AdSenseSlot";
 
 const SITE_URL = "https://www.devfostertech.com";
 
@@ -72,16 +73,11 @@ const getPreviewText = (value) =>
 
 const getPostPath = (post) => `/blog/${post.slug || post.id}`;
 const getImageSource = (post) => post.image_url || "/og-image.png";
-
-function AdSlot({ label }) {
-  return (
-    <div className="rounded-2xl border border-dashed border-[#6CDDC2]/40 bg-[#0b1116] p-6 text-center">
-      <p className="text-xs uppercase tracking-[0.2em] text-[#6CDDC2]">Ad Space</p>
-      <p className="mt-2 text-sm text-gray-400">{label}</p>
-      <p className="mt-3 text-xs text-gray-500">Replace with Google AdSense unit code later.</p>
-    </div>
-  );
-}
+const ADSENSE_SLOTS = {
+  sidebarTop: process.env.NEXT_PUBLIC_ADSENSE_SLOT_BLOG_SIDEBAR_TOP || "",
+  sidebarMid: process.env.NEXT_PUBLIC_ADSENSE_SLOT_BLOG_SIDEBAR_MID || "",
+  inline: process.env.NEXT_PUBLIC_ADSENSE_SLOT_BLOG_INLINE || "",
+};
 
 const PAGE_SIZE = 9;
 
@@ -258,7 +254,10 @@ export default async function BlogPage({ searchParams }) {
         </div>
 
         <aside className="space-y-6">
-          <AdSlot label="Top sidebar banner (300x250 or responsive)." />
+          <AdSenseSlot
+            slot={ADSENSE_SLOTS.sidebarTop}
+            label="Top sidebar banner (300x250 or responsive)."
+          />
 
           <div className="rounded-3xl border border-[#6CDDC2]/25 bg-[#0b1116] p-6">
             <h3 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-[#6CDDC2]">
@@ -276,7 +275,10 @@ export default async function BlogPage({ searchParams }) {
             </div>
           </div>
 
-          <AdSlot label="Mid-page sidebar banner for high-visibility placements." />
+          <AdSenseSlot
+            slot={ADSENSE_SLOTS.sidebarMid}
+            label="Mid-page sidebar banner for high-visibility placements."
+          />
         </aside>
       </section>
 
@@ -321,7 +323,10 @@ export default async function BlogPage({ searchParams }) {
       )}
 
       <section className="mt-12">
-        <AdSlot label="Inline content ad slot (good for responsive horizontal units)." />
+        <AdSenseSlot
+          slot={ADSENSE_SLOTS.inline}
+          label="Inline content ad slot (good for responsive horizontal units)."
+        />
       </section>
     </main>
   );
